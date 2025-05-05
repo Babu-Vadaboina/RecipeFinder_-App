@@ -13,6 +13,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="recipe-finder-container">
+      <h1>Recipe Finder</h1>
+      <form action="">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="search by name (eg. carrot)"
+          required
+        />
+        <button type="submit" id="search-button">Search</button>
+      </form>
+      <div class="random-button-container">
+        <button type="button" id="random-button" class="random-button">
+          Get Random Recipe
+        </button>
+        <div class="message" id="message-area"></div>
+        <div class="results-grid" id="results-grid">
+          <div class="recipe-item">
+            <img src="" alt="" />
+            <h3>Cake</h3>
+          </div>
+          <div class="recipe-item">
+            <img src="" alt="" />
+            <h3>Cake</h3>
+          </div>
+          <div class="recipe-item">
+            <img src="" alt="" />
+            <h3>Cake</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
