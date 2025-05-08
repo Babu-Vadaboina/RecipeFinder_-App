@@ -214,3 +214,25 @@ h1 {
   margin-top: 15px;
   margin-bottom: 8px;
 }
+
+.message {
+  margin: 25px auto;
+  padding: 10px;
+  max-width: 600px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.message .error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.message.info,
+.message.loading {
+  color: #17a2b8;
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
