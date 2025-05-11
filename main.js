@@ -8,6 +8,10 @@ const messageArea = document.getElementById("message-area");
 const randomButton = document.getElementById("random-button");
 randomButton.addEventListener("click", getRandomRecipe);
 
+const modal = document.getElementById("recipe-modal");
+const modalContent = document.getElementById("recipe-details-content");
+const modelcloseBtn = document.getElementById("modal-close-btn");
+
 async function getRandomRecipe() {
   showMessage("Loading random recipe...", false, true);
   resultsGrid.innerHTML = "";
@@ -77,3 +81,31 @@ function displayRecipes(recipes) {
     resultsGrid.appendChild(recipeDiv);
   });
 }
+
+function showModal() {
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  modal.classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
+
+resultsGrid.addEventListener("click", (event) => {
+  const card = event.target.closest(".recipe-item");
+  if (card) {
+    getRecipeDetails(123);
+  }
+});
+
+async function getRecipeDetails(id) {
+  showModal();
+}
+
+modelcloseBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
